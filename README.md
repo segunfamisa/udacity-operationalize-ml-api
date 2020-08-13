@@ -43,3 +43,8 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ### Testing the App
 * Run `./make_prediction.sh`
+
+### Output files
+The output files are contained in the [output_txt_files](output_txt_files) folder.
+* [docker_out.txt](output_txt_files/docker_out.txt)
+* [kubernetes_out.txt](output_txt_files/kubernetes_out.txt)
