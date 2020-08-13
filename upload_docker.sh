@@ -3,13 +3,16 @@
 
 # Assumes that an image is built via `run_docker.sh`
 
-# Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=segunfamisa/python-flask-ml
 
-# Step 2:  
 # Authenticate & tag
+username=$(sed '1!d' docker-creds)
+password=$(sed '2!d' docker-creds)
 echo "Docker ID and Image: $dockerpath"
 
-# Step 3:
+docker login --username $username --password $password
+docker tag python-flask-ml $dockerpath
+
 # Push image to a docker repository
+docker push $dockerpath
